@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Task from '@/app/components/Task'
 import Sidenav from '../components/Sidenav'
 const Page = () => {
-  const [itemList,setItemList]=useState([]);
+  const [itemList,setItemList]=useState<{task:string, time:string}[]>([]);
   function additem(item:{task:string, time:string}) {
     setItemList([...itemList,item]);
   }

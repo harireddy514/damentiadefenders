@@ -3,7 +3,7 @@ import React from 'react'
 import Familyform from './Familyform';
 import { useState } from 'react';
 const Familydetails = () => {
-  const [FamilyMembers, setFamilyMembers] = useState([]);
+  const [FamilyMembers, setFamilyMembers] = useState<any[]>([]);
   function addMember(member: any) {
     setFamilyMembers([...FamilyMembers, member]);
   }

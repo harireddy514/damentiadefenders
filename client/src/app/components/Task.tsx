@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import CheckIcon from '@mui/icons-material/Check';
-const Task = (props) => {
+const Task = (props:any) => {
   const [isToggle, setIsToggle]=useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {

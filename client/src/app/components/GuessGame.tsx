@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { User } from "../../../types";
 
 const GuessGame = () => {
   const [imageName, setImageName] = useState("");
@@ -10,7 +11,7 @@ const GuessGame = () => {
     relation: "",
   });
   const [score, setScore] = useState(0);
-  const [myUser,setMyUser]=useState({});
+  const [myUser,setMyUser]=useState<User | null>(null) ;
   const [index,setIndex]=useState(0);
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +22,7 @@ const GuessGame = () => {
     const response = await fetch("/db.json");
         const data = await response.json();
         console.log(data);
-        const userData = data.find((u) => {
+        const userData = data.find((u:any) => {
           if (u["Patient_Details"].userId == id) return u;
         });
         setMyUser(userData);
@@ -41,7 +42,7 @@ const GuessGame = () => {
     }
     fetchData();
   }, []);
-  const updateRandomImage = (userFound) => {
+  const updateRandomImage = (userFound:any) => {
     const len = userFound["FamilyDetails"].length;
     const randomIndex = Math.floor(Math.random() * len);
     setIndex(randomIndex); // Save index to state
@@ -50,24 +51,14 @@ const GuessGame = () => {
     setImageName(userFound["FamilyDetails"][randomIndex].f_pic[picIndex]);
     console.log("imageName", userFound["FamilyDetails"][randomIndex].f_pic[picIndex]);
   };
-  function onchange(ev) {
+  function onchange(ev:any) {
     const { name, value } = ev.target;
     setInfo({ ...info, [name]: value });
   }
-  // const onclick = (ev) => {
-  //   ev.preventDefault();
-  //   if (
-  //     myUser &&
-  //     info.name === myUser["FamilyDetails"][index].fname &&
-  //     info.relation === myUser["FamilyDetails"][index].frelation
-  //   ) {
-  //     setScore((prevScore) => prevScore + 1);
-  //     // router.push("/");
-  //     redirect("/");
-  //   }
-  // };
-  function onclick(ev) {
+ 
+  function onclick(ev:any) {
     ev.preventDefault();
+    if(myUser) {
     console.log(myUser);
     console.log(info);
     console.log(myUser["FamilyDetails"][index]);
@@ -79,6 +70,7 @@ const GuessGame = () => {
     else {
       alert("Incorrect name or relation. Try again!");
     }
+  }
   }
   return (
     <div>

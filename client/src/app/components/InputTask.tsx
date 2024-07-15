@@ -1,16 +1,16 @@
 'use client'
 import React, { useState } from 'react'
 
-const InputTask = (props) => {
+const InputTask = (props:any) => {
     const [item,setItem]=useState({
         task:"",
         time:""
     });
-    function onchange(e) {
+    function onchange(e:any) {
       const {name,value}=e.target;
       setItem({...item,[name]:value});
     }
-    function onclick(e) {
+    function onclick(e:any) {
       props.addTask(item);
       setItem({
         task:"",
