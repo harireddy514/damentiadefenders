@@ -3,7 +3,7 @@ import InputTask from '@/app/components/InputTask'
 import React, { useState } from 'react'
 import Task from '@/app/components/Task'
 import Sidenav from '../components/Sidenav'
-const page = () => {
+const Page = () => {
   const [itemList,setItemList]=useState([]);
   function additem(item:{task:string, time:string}) {
     setItemList([...itemList,item]);
@@ -18,8 +18,8 @@ const page = () => {
       <br />
       {itemList.map((item,index)=>{
         return (
-          <div>
-          <Task key={index} id={index} task={item.task} time={item.time} />
+          <div key={index} >
+          <Task id={index} task={item.task} time={item.time} />
           </div>
         );
       })}
@@ -31,4 +31,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

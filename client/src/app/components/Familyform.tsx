@@ -3,20 +3,20 @@ import { useState } from 'react';
 const Familyform = (props:any) => {
   
 
-  const handleFileChange= (e) =>{
+  const handleFileChange= (e:any) =>{
    setfdata({
     ...fdata,
     f_pic:Array.from(e.target.files)
    })
   }
-  const onchange= (e) =>{
+  const onchange= (e:any) =>{
     const {name,value}=e.target;
     setfdata({
      ...fdata, 
      [name]:value
     })
   }
-const onsubmit=(e)=>{
+const onsubmit=(e:any)=>{
     e.preventDefault();
     console.log("formdata",fdata);
     props.onAdd(fdata);

@@ -21,7 +21,7 @@ const ImageSlider = () => {
           </div>
         ))}
       </div>
-      <h1 className={styles.quote}>'Holding Hands, Sharing Hearts, Navigating Dementia Together in every Step !!'</h1>
+      <h1 className={styles.quote}>&apos;Holding Hands, Sharing Hearts, Navigating Dementia Together in every Step !!&apos;</h1>
     </div>
   );
 }

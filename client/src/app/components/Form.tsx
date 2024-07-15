@@ -9,7 +9,7 @@ const Form = () => {
     phobbies: "",
     p_pic: []
   });
-  const handleFileChange = (e) => {
+  const handleFileChange = (e:any) => {
     setPdata({
       ...pdata,
       p_pic: Array.from(e.target.files)
