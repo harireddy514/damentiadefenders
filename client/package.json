@@ -1,0 +1,38 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.21",
+    "@mui/material": "^5.15.21",
+    "@next/font": "^14.2.4",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "http-proxy-middleware": "^3.0.0",
+    "material-dashboard": "^3.0.9",
+    "multer": "^1.4.5-lts.1",
+    "next": "^13.5.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.5",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "latest",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^13.5.3",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "^5.2.2"
+  }
+}
