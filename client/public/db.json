@@ -1,0 +1,50 @@
+[
+  {
+    "Patient_Details": {
+      "pname": "rohit",
+      "pemail": "rohit@gmail.com",
+      "p_age": "65",
+      "pdob": "",
+      "phobbies": "reading",
+      "p_pic": [
+        "Screenshot_9-7-2024_19561_localhost.jpeg",
+        "brd_output.jpeg",
+        "Screenshot_19-6-2024_13619_localhost.jpeg"
+      ],
+      "userId": "6ad9c658-19cc-488a-90a9-e49f7891ed1e"
+    },
+    "FamilyDetails": [
+      {
+        "fname": "fggh",
+        "frelation": "son",
+        "fphone": "9999999999",
+        "femail": "fgh@gmail.com",
+        "faddress": "oak tree, delhi",
+        "fjob": "",
+        "f_age": "40",
+        "fdob": "",
+        "fhobbies": "",
+        "f_pic": [
+          "Screenshot_14-6-2024_114525_localhost.jpeg",
+          "gms-ai_home.jpeg",
+          "Screenshot_12-6-2024_152318_localhost.jpeg"
+        ]
+      },
+      {
+        "fname": "werr",
+        "frelation": "",
+        "fphone": "",
+        "femail": "",
+        "faddress": "",
+        "fjob": "",
+        "f_age": "",
+        "fdob": "",
+        "fhobbies": "",
+        "f_pic": [
+          "Dementia app Wireframe.png",
+          "Screenshot_14-6-2024_114525_localhost.jpeg"
+        ]
+      }
+    ]
+  }
+]
