@@ -1,0 +1,20 @@
+/* 
+  aside {
+    position: fixed;
+    inset: 0 auto 0 0;
+    padding: 1rem;
+    width: var(--sb-width);
+    background-image: linear-gradient(#90c3fd, #ba71ff, #ff71b8);
+    transition: width 0.5s ease-in-out;
+  } */
+
+.main {
+    margin-left: var(--sb-width);
+    padding: 1rem 2rem;
+    transition: margin-left 0.5s ease-in-out;
+  }
+
+  /* .sb-expanded .collapse{
+    opacity: 0;
+    visibility: hidden;
+  } */
