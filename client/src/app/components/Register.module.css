@@ -1,0 +1,10 @@
+.register {
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/static/dem_images/d5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
