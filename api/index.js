@@ -37,6 +37,10 @@ const authenticateUser = (req, res, next) => {
     }
 }
 
+app.get('/api/hello',(req,res)=>{
+   res.send("Hello World");
+})
+
 app.post('/api/register',async (req,res)=>{
     const User = req.body;
     let existingData = [];
@@ -127,8 +131,8 @@ app.post('/api/familydetails', authenticateUser, upload.any(), async (req, res) 
 }
 )
 
-app.post('/api/memorygames/guess',  authenticateUser, async (req,res)=>{
+// app.post('/api/memorygames/guess',  authenticateUser, async (req,res)=>{
 
-})
+// })
 
 app.listen(3001);
