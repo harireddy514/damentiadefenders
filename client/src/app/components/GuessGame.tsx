@@ -78,7 +78,9 @@ const GuessGame = () => {
       <div>
         <h4 className="text-center">Enter the name of this person:</h4>
         <h4>Score:{score}</h4>
+        <div className="flex justify-center items-center">
         <img src={`/static/Images/${imageName}`} alt={imageName} />
+        </div>
       </div>
       <form className="text-center">
         <input

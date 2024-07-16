@@ -11,6 +11,7 @@ const InputTask = (props:any) => {
       setItem({...item,[name]:value});
     }
     function onclick(e:any) {
+      if(!item.task || !item.time)
       props.addTask(item);
       setItem({
         task:"",
