@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FormEvent, ChangeEvent } from "react";
+import { BACKEND_URL } from "../../../constants";
 interface Pdata {
   pname: string;
   pemail: string;
@@ -50,7 +51,7 @@ const Form = () => {
       console.log(formData);
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:3001/api/personaldetails",
+        `${BACKEND_URL}/api/personaldetails`,
         {
           method: "POST",
           // headers: { "Content-Type": "application/JSON" },

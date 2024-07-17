@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import styles from './Register.module.css'
 import {useRouter} from 'next/navigation'
+import { BACKEND_URL } from '../../../constants';
 const Register = () => {
     const [username, setUsername]=useState("");
     const [phone, setPhone]=useState("");
@@ -18,7 +19,7 @@ const Register = () => {
         Password:password
         };
         try {
-        const response=await fetch("http://localhost:3001/api/register",{
+        const response=await fetch(`${BACKEND_URL}api/register`,{
           method:"POST",
           headers:{"Content-Type":"application/JSON"},
           body:JSON.stringify(obj)

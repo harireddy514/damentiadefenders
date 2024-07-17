@@ -2,6 +2,7 @@
 import React from 'react'
 import Familyform from './Familyform';
 import { useState } from 'react';
+import { BACKEND_URL } from '../../../constants';
 const Familydetails = () => {
   const [FamilyMembers, setFamilyMembers] = useState<any[]>([]);
   function addMember(member: any) {
@@ -27,7 +28,7 @@ const Familydetails = () => {
 
       console.log(formData);
       const token = localStorage.getItem('token');
-      const response = await fetch("http://localhost:3001/api/familydetails", {
+      const response = await fetch(`${BACKEND_URL}/familydetails`, {
         method: "POST",
         body: formData,
         headers: {

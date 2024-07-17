@@ -2,6 +2,7 @@
 import React, { FormEvent, useState } from 'react'
 import { useRouter } from 'next/navigation';
 import styles from './Login.module.css'
+import { BACKEND_URL } from '../../../constants';
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +14,7 @@ const Login = () => {
       password: password
     };
     try {
-      const response = await fetch("http://localhost:3001/api/login", {
+      const response = await fetch(`${BACKEND_URL}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/JSON" },
         body: JSON.stringify(obj),
