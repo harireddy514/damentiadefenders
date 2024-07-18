@@ -12,7 +12,7 @@ import {usePathname} from "next/navigation";
 const Sidenav = () => {
   const [isExpanded,setIsExpanded]=useState(true);
   const pathname = usePathname();
-  function onclick(ev) {
+  function onclick(ev:any) {
     ev.preventDefault();
     setIsExpanded(!isExpanded);
     document.body.style.setProperty(
