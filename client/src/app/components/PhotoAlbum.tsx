@@ -74,7 +74,7 @@ const PhotoAlbum: React.FC = () => {
         sx={{ width: 800, height: 600 }}
         variant="quilted"
         cols={4}
-        rowHeight={121}
+        rowHeight={140}
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>

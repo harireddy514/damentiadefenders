@@ -28,7 +28,7 @@ const Familydetails = () => {
 
       console.log(formData);
       const token = localStorage.getItem('token');
-      const response = await fetch(`${BACKEND_URL}/familydetails`, {
+      const response = await fetch(`${BACKEND_URL}/api/familydetails`, {
         method: "POST",
         body: formData,
         headers: {

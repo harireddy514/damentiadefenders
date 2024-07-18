@@ -1,0 +1,10 @@
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.error {
+    display: none;
+    color: red;
+    margin-top: 20px;
+}

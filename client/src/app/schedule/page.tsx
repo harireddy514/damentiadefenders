@@ -3,6 +3,7 @@ import InputTask from '@/app/components/InputTask'
 import React, { useState } from 'react'
 import Task from '@/app/components/Task'
 import Sidenav from '../components/Sidenav'
+import Notifications from '../components/Notifications'
 const Page = () => {
   const [itemList,setItemList]=useState<{task:string, time:string}[]>([]);
   function additem(item:{task:string, time:string}) {
@@ -26,6 +27,7 @@ const Page = () => {
       <br />
       <InputTask addTask={additem} />
       </div>
+      <div className='float-right' id="notif"><Notifications userId="dementiadefenders@gmail.com"/></div>
       </main>
     </div>
   )

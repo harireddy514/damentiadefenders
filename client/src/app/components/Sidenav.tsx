@@ -10,18 +10,29 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 const Sidenav = () => {
-  const [isCollapsed,setIsCollapsed]=useState(true);
+  const [isExpanded,setIsExpanded]=useState(true);
   const pathname = usePathname();
-    function onclick(ev:any) {
-        ev.preventDefault();
-        setIsCollapsed(!isCollapsed);
-        document.body.style.setProperty('--sb-width', isCollapsed ? '5rem':'18rem' );
-        document.body.style.setProperty('--sb-visibility', isCollapsed ? 'hidden':'visible' );
+  function onclick(ev) {
+    ev.preventDefault();
+    setIsExpanded(!isExpanded);
+    document.body.style.setProperty(
+      "--sb-width",
+      isExpanded ? "18rem" : "5rem"
+    );
 
-       }
+    document.body.style.setProperty(
+      "--sb-visibility",
+      isExpanded ? "visible" : "hidden"
+    );
+  }
+
+  React.useEffect(() => {
+    document.body.style.setProperty("--sb-width", "5rem");
+    document.body.style.setProperty("--sb-visibility", "hidden");
+  }, []);
   return (
-       <div className={styles.body}>
-      <aside className={styles['sidenav']}>
+       <div>
+      <aside className={styles.sidenav}>
         <div>
           <a className="mb-10" href="/" target="_blank">
             <span className={styles.collapse} style={{fontWeight:'bold',fontSize:'1.25rem'}}>
@@ -33,24 +44,24 @@ const Sidenav = () => {
         <div className="w-auto">
           <ul>
             <li>
-              <Link className={pathname=="/dashboard" ? styles.active : ""} href="/dashboard">
-                <div className="item">
+              <Link className={pathname==="/dashboard" ? styles.active : ""} href="/dashboard">
+                <div className={styles.item}>
                   <DashboardIcon />
                   <span  className={styles.collapse}>Dashboard</span>
                 </div>
               </Link>
             </li>
             <li>
-              <Link className={pathname=="/schedule" ? styles.active : ""} href="/schedule">
-                <div className="item">
+              <Link className={pathname==="/schedule" ? styles.active : ""} href="/schedule">
+                <div className={styles.item}>
                   <TodayIcon />
                   <span className={styles.collapse}>Daily Schedule</span>
                 </div>
               </Link>
             </li>
             <li>
-              <Link className={pathname=="/personaldetails" ? styles.active : ""} href="/personaldetails">
-                <div className="item">
+              <Link className={pathname==="/personaldetails" ? styles.active : ""} href="/personaldetails">
+                <div className={styles.item}>
                   <InfoIcon />
                   <span className={styles.collapse}>Personal Details</span>
                 </div>
@@ -58,23 +69,23 @@ const Sidenav = () => {
             </li>
             <li>
               <Link className={pathname=="/familydetails" ? styles.active : ""} href="/familydetails">
-                <div className="item">
+                <div className={styles.item}>
                   <InfoIcon />
                   <span className={styles.collapse}>Family Details</span>
                 </div>
               </Link>
               </li>
               <li>
-              <Link className={pathname=="/memories" ? styles.active : ""} href="/memories">
-                <div className="item">
+              <Link className={pathname==="/memories" ? styles.active : ""} href="/memories">
+                <div className={styles.item}>
                   <CollectionsIcon />
                   <span className={styles.collapse}>Memories</span>
                 </div>
               </Link>
               </li>
               <li>
-              <Link className={pathname=="/memorygames" ? styles.active : ""} href="/memorygames">
-                <div className="item">
+              <Link className={pathname==="/memorygames" ? styles.active : ""} href="/memorygames">
+                <div className={styles.item}>
                   <PsychologyIcon />
                   <span className={styles.collapse}>Memory Games</span>
                 </div>
@@ -83,7 +94,6 @@ const Sidenav = () => {
             <li>
               <div className='text-white align-center m-10'>
                 <button onClick={onclick}><ChevronRightIcon/></button>
-                <span onClick={onclick} className={styles.collapse}>Collapse</span>
               </div>
             </li>
           </ul>

@@ -19,7 +19,7 @@ const Register = () => {
         Password:password
         };
         try {
-        const response=await fetch(`${BACKEND_URL}api/register`,{
+        const response=await fetch(`${BACKEND_URL}/api/register`,{
           method:"POST",
           headers:{"Content-Type":"application/JSON"},
           body:JSON.stringify(obj)

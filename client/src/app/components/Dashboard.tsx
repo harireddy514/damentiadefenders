@@ -2,6 +2,8 @@
 import React from "react";
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import CaregiverAnalytics from "./CareGiverChart";
+import TaskTracker from "./TaskTracker";
 interface User {
   id: string;
   accessToken: string;
@@ -25,8 +27,12 @@ const Dashboard = () => {
   
   return (
       <div>
-      <main className="ml-20"></main>
+      <main className="ml-20 mb-20">
+        <h2 className="flex text-center items-center justify-center">Dashboard</h2>
+        <CaregiverAnalytics />
+        <TaskTracker />
+      </main>
     </div>
-  );
+  )
 };
 export default Dashboard;

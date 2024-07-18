@@ -131,8 +131,24 @@ app.post('/api/familydetails', authenticateUser, upload.any(), async (req, res) 
 }
 )
 
-// app.post('/api/memorygames/guess',  authenticateUser, async (req,res)=>{
-
-// })
+app.post('/api/schedule',  authenticateUser, async (req,res)=>{
+    notificationapi.init(
+        '8eg5jn6g4c6ej2a5p3sgwarq1l', // clientId
+        'hjq6qgnvaes28nb8gr7efokbfto6orhwxlgs479d8wjqyuwwd8j0dc3chx'// clientSecret
+      )
+      
+      notificationapi.send({
+        notificationId: 'hi',
+        user: {
+          id: "dementiadefenders@gmail.com",
+          email: "dementiadefenders@gmail.com",
+          number: "+15005550006" // Replace with your phone number
+        },
+        mergeTags: {
+          "comment": "testComment",
+          "commentId": "testCommentId"
+        }
+      })
+})
 
 app.listen(8080);
