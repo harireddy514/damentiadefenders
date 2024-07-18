@@ -5,7 +5,7 @@ module.exports = {
    return [
      {
        source: '/api/:path*',
-       destination: 'https://localhost:8080/:path*/', // Proxy to Backend
+       destination: 'https://damentiadefenders-2s37kv2bua-uc.a.run.app/:path*/', // Proxy to Backend
      },
    ];
  },
