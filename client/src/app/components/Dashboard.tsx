@@ -29,8 +29,8 @@ const Dashboard = () => {
       <div>
       <main className="ml-20 mb-20">
         <h2 className="flex text-center items-center justify-center">Dashboard</h2>
-        <CaregiverAnalytics />
-        <TaskTracker />
+{/*         <CaregiverAnalytics />
+        <TaskTracker /> */}
       </main>
     </div>
   )
